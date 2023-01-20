@@ -1,5 +1,7 @@
 이성미 강사님의 [따배쿠](https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c) 강의를 따라가는 Repo입니다.
 
+[코드 자료](https://github.com/237summit/k8s_core_labs)
+
 차이점은 k8s가 아닌 Minikube 환경에서 진행합니다.
 
 k3s vs Minikube

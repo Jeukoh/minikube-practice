@@ -95,10 +95,10 @@ $ kubectl config view
 ...
 contexts:
 - context:
-    cluster: kubernetes
+    cluster: jeukoh
     namespace: blue
-    user: kubernetes-admin
-  name: blue@kubernetes
+    user: jeukoh
+  name: blue-jeukoh
 - context:
     cluster: jeukoh
     extensions:
@@ -107,17 +107,20 @@ contexts:
         provider: minikube.sigs.k8s.io
         version: v1.28.0
       name: context_info
-    namespace: default
+    namespace: blue
     user: jeukoh
   name: jeukoh
 
 
 # context 설정
-$ kubectl config set-context blue@kubernetes --cluster=kubernetes --user=kubernetes-admin --namespace=blue
-Context "blue@kubernetes" created.
+$ kubectl config set-context blue-jeukoh --cluster=jeukoh --user=jeukoh --namespace=blue
+Context "blue-jeukoh" created.
 
 # 현재 context 확인
 $ kubectl config current-context
+
+# Context switching
+$ kubectl config use-context CONTEXT_NAME
 ```
 
-Minikube에서는 extensions이 없어서 그런가 해당 방법으론 blue로 context switch 시 문제가 있음. 추후 다른 방법 추가.
+cluster name과 user name은 기존 context (jeukoh)와 같은 것으로 쓰기.
